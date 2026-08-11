@@ -7366,3 +7366,149 @@ a.credit {
   padding-bottom: 0;
 }
 
+/* Navbar fit — extra nav items need tighter spacing to stay on one line */
+@media (min-width: 1200px) {
+  .navbar .navbar-nav .nav-link:not(.btn) {
+    padding: 0.5rem 0.5rem;
+    white-space: nowrap;
+  }
+}
+
+.cc-store-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.cc-store-links a {
+  white-space: nowrap;
+}
+
+/* Featured Engineering Work */
+.cc-work-feature {
+  border-top: 3px solid #378C3F;
+}
+
+.cc-caption {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #9A9A9A;
+}
+
+.cc-badge-row {
+  margin: 10px 0 15px;
+}
+
+.cc-badge {
+  display: inline-block;
+  background: rgba(55, 140, 63, 0.08);
+  color: #378C3F;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  margin: 0 8px 8px 0;
+  border-radius: 20px;
+}
+
+.cc-work-areas {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .cc-work-areas {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+.cc-work-card {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  padding: 18px 20px;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.cc-challenge-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.cc-challenge-num {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 46px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #378C3F;
+  line-height: 1.4;
+}
+
+.cc-arch-flow {
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cc-arch-box {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-weight: 700;
+}
+
+.cc-arch-box-primary {
+  background: #378C3F;
+  color: #FFFFFF;
+}
+
+.cc-arch-arrow {
+  color: #378C3F;
+  padding: 6px 0;
+}
+
+.cc-glance-item {
+  text-align: center;
+  padding: 16px 8px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cc-glance-item p {
+  font-size: 12px;
+  opacity: .75;
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-badge,
+  .cc-work-card,
+  .cc-glance-item,
+  [data-aos] {
+    -webkit-transition: none !important;
+    transition: none !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+}
+
