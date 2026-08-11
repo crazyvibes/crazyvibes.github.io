@@ -41,3 +41,31 @@ $('a.smooth-scroll')
     }
   }
 });
+
+// Dark mode toggle
+(function () {
+  var root = document.documentElement;
+  var toggleBtn = document.getElementById('themeToggle');
+  var toggleIcon = toggleBtn ? toggleBtn.querySelector('i') : null;
+  var STORAGE_KEY = 'theme';
+
+  function syncIcon() {
+    if (!toggleIcon) return;
+    var isDark = root.classList.contains('dark-mode');
+    toggleIcon.classList.toggle('fa-moon-o', !isDark);
+    toggleIcon.classList.toggle('fa-sun-o', isDark);
+  }
+
+  syncIcon();
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      root.classList.toggle('dark-mode');
+      syncIcon();
+      try {
+        localStorage.setItem(STORAGE_KEY, root.classList.contains('dark-mode') ? 'dark' : 'light');
+      } catch (err) {}
+    });
+  }
+})();

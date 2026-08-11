@@ -7358,6 +7358,7 @@ a.credit {
 @media (max-width: 991px) {
   .cc-quick-facts {
     margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
 
@@ -7381,7 +7382,9 @@ a.credit {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px 12px;
 }
 
 .cc-store-links a {
@@ -7438,8 +7441,16 @@ a.credit {
   background: rgba(0, 0, 0, 0.03);
   border-radius: 6px;
   padding: 18px 20px;
-  height: 100%;
   margin-bottom: 20px;
+}
+
+.cc-work-col {
+  margin-bottom: 20px;
+}
+
+.cc-work-col .cc-work-card-equal {
+  height: 100%;
+  margin-bottom: 0;
 }
 
 .cc-challenge-item {
@@ -7492,6 +7503,17 @@ a.credit {
   margin-bottom: 20px;
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cc-glance-item p {
@@ -7509,6 +7531,95 @@ a.credit {
     transition: none !important;
     -webkit-animation: none !important;
     animation: none !important;
+  }
+}
+
+/* Dark Mode */
+body,
+.card,
+.section,
+.modal-content {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark-mode body {
+  background-color: #121212;
+  color: #e8e8e8;
+}
+
+html.dark-mode .section {
+  background-color: #121212;
+}
+
+html.dark-mode a {
+  color: #5cbf68;
+}
+
+html.dark-mode a:hover,
+html.dark-mode a:focus {
+  color: #7ed389;
+}
+
+html.dark-mode .card,
+html.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #e8e8e8;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.6);
+}
+
+html.dark-mode .modal-content {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark-mode .close {
+  color: #e8e8e8;
+  text-shadow: none;
+}
+
+html.dark-mode .cc-quick-facts,
+html.dark-mode .cc-work-card,
+html.dark-mode .cc-glance-item,
+html.dark-mode .cc-arch-box {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+html.dark-mode .cc-arch-box-primary {
+  background-color: #378C3F;
+  color: #FFFFFF;
+}
+
+html.dark-mode .cc-badge {
+  background: rgba(92, 191, 104, 0.15);
+  color: #7ed389;
+}
+
+html.dark-mode .cc-stat {
+  background: rgba(92, 191, 104, 0.12);
+}
+
+html.dark-mode .cc-stat-number {
+  color: #7ed389;
+}
+
+html.dark-mode .cc-about-highlights li i,
+html.dark-mode .cc-quick-facts li i {
+  color: #5cbf68;
+}
+
+html.dark-mode .progress {
+  background-color: #2a2a2a;
+}
+
+html.dark-mode .cc-contact-information {
+  background-color: #121212;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .card,
+  .section,
+  .modal-content {
+    transition: none !important;
   }
 }
 

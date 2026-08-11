@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Birju Kumar | Senior Android Engineer</title>
     <meta name="description" content="Birju Kumar - Senior Android Engineer specializing in Android SDK and iOS SDK engineering, mobile developer platforms, and Android + iOS product development."/>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var wantsDark = stored ? stored === 'dark' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (wantsDark) {
+            document.documentElement.classList.add('dark-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
@@ -30,6 +41,7 @@
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#work">Work</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#learning-projects">Learning</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="themeToggle" role="button" aria-label="Toggle dark mode" title="Toggle dark mode"><i class="fa fa-moon-o" aria-hidden="true"></i></a></li>
               </ul>
             </div>
           </div>
@@ -274,7 +286,7 @@
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Senior Software Engineer (SDE-III) — Android &amp; iOS SDK / Mobile Platform</div>
+            <div class="h5">Senior Software Engineer (SDE-III)</div>
             <p>
               <UL>
                 <li>Owned end-to-end engineering of production Android and iOS Location SDKs distributed to enterprise customers, covering SDK architecture, public API design, semantic versioning, backward compatibility, release management, and long-term maintenance.</li>
@@ -588,27 +600,27 @@
 
     <div class="h6 title mt-4 mb-3">Shipped Applications — WayCool</div>
     <div class="row">
-      <div class="col-6 col-md-3">
-        <div class="cc-work-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="col-6 col-md-3 cc-work-col">
+        <div class="cc-work-card cc-work-card-equal" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <div class="h5">WayCool</div>
           <p class="category mb-2">Android · Product Developer</p>
           <a href="https://play.google.com/store/search?q=WayCool&c=apps&hl=en_IN" target="_blank" rel="noopener">View on Play Store <i class="fa fa-external-link"></i></a>
         </div>
       </div>
-      <div class="col-6 col-md-3">
-        <div class="cc-work-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="col-6 col-md-3 cc-work-col">
+        <div class="cc-work-card cc-work-card-equal" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <div class="h5">Quality Digitization</div>
           <p class="category mb-0">Android · Product Developer</p>
         </div>
       </div>
-      <div class="col-6 col-md-3">
-        <div class="cc-work-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="col-6 col-md-3 cc-work-col">
+        <div class="cc-work-card cc-work-card-equal" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <div class="h5">Benchmarkers</div>
           <p class="category mb-0">Android · Product Developer</p>
         </div>
       </div>
-      <div class="col-6 col-md-3">
-        <div class="cc-work-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="col-6 col-md-3 cc-work-col">
+        <div class="cc-work-card cc-work-card-equal" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <div class="h5">MyPrice</div>
           <p class="category mb-0">Android · Product Developer</p>
         </div>
